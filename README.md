@@ -1,5 +1,6 @@
 # calendar.js
 Perhaps the most simple and easy to use, the most powerful date processing tool 也许是最简单易用，功能最强的日期处理工具
+
 Calendar.getInstance('2015年 02月 04日').format('EEE')
 
 "星期三"
