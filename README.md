@@ -9,38 +9,38 @@ Calendar.getInstance('2015年 02月 04日').format('EEE')
 ```javascript
 Calendar.getInstance(new Date()).format('EEE')
 ```
-"星期五"
+输出 "星期五"
 ```javascript
 Calendar.getInstance(new Date().getTime()).format('EEE')
 ```
-"星期五"
+输出 "星期五"
 ```javascript
 new Date().getTime()
 1455846811337
 Calendar.getInstance(1455846811337).format('yyyyMMdd HHmmss')
-"20160219 095331"
 ```
+输出 "20160219 095331"
 ```javascript
 Calendar.getInstance(1455846811337).format('EE')
 ```
-"周五"
+输出 "周五"
 ```javascript
 Calendar.getInstance(1455846811337).add(Calendar.MONTH,1).format('EE')
 ```
-"周六"
+输出 "周六"
 ```javascript
 Calendar.getInstance(1455846811337).add(Calendar.MONTH,-1).format('EE')
 ```
-"周二"
+输出 "周二"
 ```javascript
 Calendar.getInstance(1455846811337).add(Calendar.WEEK,-1).format('EE')
 ```
-"周五"
+输出 "周五"
 ```javascript
 Calendar.getInstance().add(Calendar.WEEK,-1).format('EE')
 ```
-"周五"
+输出 "周五"
 ```javascript
 Calendar.getInstance().add(Calendar.WEEK,-1).format('yyyy年')
 ```
-"2016年"
+输出 "2016年"
