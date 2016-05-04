@@ -11,9 +11,10 @@
  * @date 20160120
  */
 (function(window){
-    window.Calendar = function () {
+    var Calendar = function () {
         throw new TypeError('请使用getInstance方法进行实例化');
     };
+    typeof window == 'undefined' ? (module.exports = Calendar) : (window.Calendar = Calendar);
 
     Calendar.prototype = {
         constructor:Calendar,
