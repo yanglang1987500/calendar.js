@@ -77,7 +77,7 @@
                     timeObj+='0';
                     len++;
                 }
-                timeObj = timeObj.replace(/^(\d{4})(\d{2})(\d{2})(\d{2})?(\d{2})?(\d{2})?$/, '$1/$2/$3 $4:$5:$6');
+                timeObj = timeObj.replace(/^(\d{4})(\d{2})(\d{2})(\d{2})?(\d{2})?(\d{2})?.*$/, '$1/$2/$3 $4:$5:$6');
                 this.date = new Date(timeObj);
             }else if(type === '[object Object]' && timeObj instanceof this.constructor){
                 this.date = timeObj.getTime();
