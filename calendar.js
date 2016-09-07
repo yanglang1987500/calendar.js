@@ -109,6 +109,33 @@
         return new Calendar.prototype.init(date);
     };
 
+    /**
+     * 获取服务器时间
+     * @returns {Date}
+     */
+    Calendar.getServerTime = function () {
+        var xmlHttp = false;
+        //获取服务器时间
+        try {
+            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e2) {
+                xmlHttp = false;
+            }
+        }
+
+        if (!xmlHttp && typeof XMLHttpRequest != 'undefined') {
+            xmlHttp = new XMLHttpRequest();
+        }
+
+        xmlHttp.open("GET", "null", false);
+        xmlHttp.setRequestHeader("Range", "bytes=-1");
+        xmlHttp.send(null);
+        return new Date(xmlHttp.getResponseHeader("Date"));
+    };
+
     Calendar.YEAR = 1;
     Calendar.MONTH = 2;
     Calendar.DATE = 3;
