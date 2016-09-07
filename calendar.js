@@ -52,6 +52,9 @@
                 case 6:
                     this.date.setMinutes(num + this.date.getMinutes());
                     break;
+                case 7:
+                    this.date.setSeconds(num + this.date.getSeconds());
+                    break;
             }
             return this;
         },
@@ -142,6 +145,7 @@
     Calendar.WEEK = 4;
     Calendar.HOUR = 5;
     Calendar.MINUTE = 6;
+    Calendar.SECOND = 7;
 
     /**
      * 对Date的扩展，将 Date 转化为指定格式的String<br>
