@@ -168,6 +168,7 @@
             "d+" : this.getDate(), //日
             "h+" : this.getHours() % 12 == 0 ? 12: this.getHours() % 12, //小时
             "H+" : this.getHours(), //小时
+            "U+" : this.getUTCHours(), //UTC小时
             "m+" : this.getMinutes(), //分
             "s+" : this.getSeconds(), //秒
             "q+" : Math.floor((this.getMonth() + 3) / 3), //季度
