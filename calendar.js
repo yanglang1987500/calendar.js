@@ -16,6 +16,14 @@
     };
     typeof window == 'undefined' ? (module.exports = Calendar) : (window.Calendar = Calendar);
 
+    Calendar.YEAR = 1;
+    Calendar.MONTH = 2;
+    Calendar.DATE = 3;
+    Calendar.WEEK = 4;
+    Calendar.HOUR = 5;
+    Calendar.MINUTE = 6;
+    Calendar.SECOND = 7;
+
     Calendar.prototype = {
         constructor:Calendar,
         /**
@@ -34,25 +42,25 @@
             if (isNaN(num))
                 throw new TypeError('第二个参数必须为数字');
             switch (type) {
-                case 1:
+                case Calendar.YEAR:
                     this.date.setFullYear(num + this.date.getFullYear());
                     break;
-                case 2:
+                case Calendar.MONTH:
                     this.date.setMonth(num + this.date.getMonth());
                     break;
-                case 3:
+                case Calendar.DATE:
                     this.date.setDate(num + this.date.getDate());
                     break;
-                case 4:
+                case Calendar.WEEK:
                     this.date.setDate(num*7 + this.date.getDate());
                     break;
-                case 5:
+                case Calendar.HOUR:
                     this.date.setHours(num + this.date.getHours());
                     break;
-                case 6:
+                case Calendar.MINUTE:
                     this.date.setMinutes(num + this.date.getMinutes());
                     break;
-                case 7:
+                case Calendar.SECOND:
                     this.date.setSeconds(num + this.date.getSeconds());
                     break;
             }
@@ -139,13 +147,7 @@
         return new Date(xmlHttp.getResponseHeader("Date"));
     };
 
-    Calendar.YEAR = 1;
-    Calendar.MONTH = 2;
-    Calendar.DATE = 3;
-    Calendar.WEEK = 4;
-    Calendar.HOUR = 5;
-    Calendar.MINUTE = 6;
-    Calendar.SECOND = 7;
+ 
 
     /**
      * 对Date的扩展，将 Date 转化为指定格式的String<br>

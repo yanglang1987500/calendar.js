@@ -4,35 +4,35 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="calendar.js"></script>
-    <script>
-        Calendar.getInstance('2015年 02月 04日').format('EEE');
-
-        Calendar.getInstance(new Date()).format('EEE');
-
-        Calendar.getInstance(new Date().getTime()).format('EEE');
-
-        new Date().getTime();
-        Calendar.getInstance(1455846811337).format('yyyyMMdd HHmmss');
-
-        Calendar.getInstance(1455846811337).format('EE');
-
-        Calendar.getInstance(1455846811337).add(Calendar.MONTH,1).format('EE');
-
-        Calendar.getInstance(1455846811337).add(Calendar.MONTH,-1).format('EE');
-
-        Calendar.getInstance(1455846811337).add(Calendar.WEEK,-1).format('EE');
-
-        Calendar.getInstance().add(Calendar.WEEK,-1).format('EE');
-
-        Calendar.getInstance().add(Calendar.WEEK,-1).format('yyyy年');
-
-
-        Calendar.getServerTime();
-
-        Calendar.getInstance().add(Calendar.SECOND,20).format('s');
-    </script>
+    
 </head>
 <body>
+<script>
+        document.writeln(Calendar.getInstance('2015年 02月 04日').format('EEE')+'<br>');
 
+        document.writeln(Calendar.getInstance(new Date()).format('EEE')+'<br>');
+
+        document.writeln(Calendar.getInstance(new Date().getTime()).format('EEE')+'<br>');
+
+        document.writeln(new Date().getTime()+'<br>');
+        document.writeln(Calendar.getInstance(1455846811337).format('yyyyMMdd HHmmss')+'<br>');
+
+        document.writeln(Calendar.getInstance(1455846811337).format('EE')+'<br>');
+
+        document.writeln(Calendar.getInstance(1455846811337).add(Calendar.MONTH,1).format('EE')+'<br>');
+
+        document.writeln(Calendar.getInstance(1455846811337).add(Calendar.MONTH,-1).format('EE')+'<br>');
+
+        document.writeln(Calendar.getInstance(1455846811337).add(Calendar.WEEK,-1).format('EE')+'<br>');
+
+        document.writeln(Calendar.getInstance().add(Calendar.WEEK,-1).format('EE')+'<br>');
+
+        document.writeln(Calendar.getInstance().add(Calendar.WEEK,-1).format('yyyy年')+'<br>');
+
+
+        //Calendar.getServerTime();
+
+        document.writeln(Calendar.getInstance().add(Calendar.SECOND,20).format('s')+'<br>');
+    </script>
 </body>
 </html>
