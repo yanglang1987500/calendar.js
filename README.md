@@ -18,10 +18,10 @@ API非常简洁，只有getInstance、add、format、parse、getTime五个方法
 * parse方法负责转换字符串，任何格式的时间都能转换，如'2015年 12 月 03日 12时'
 * getTime方法获取Date对象
 
-使用示例  
------------
+# 使用示例  
 
-## 通过时间字符串提取并格式化
+
+#### 通过时间字符串提取并格式化
 ```javascript
 Calendar.getInstance('2015年 02月 04日').format('EEE')
 ```
