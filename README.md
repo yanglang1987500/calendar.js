@@ -19,9 +19,9 @@ API非常简洁，只有getInstance、add、format、parse、getTime五个方法
 * getTime方法获取Date对象
 
 使用示例  
-
-通过时间字符串提取并格式化
 -----------
+
+## 通过时间字符串提取并格式化
 ```javascript
 Calendar.getInstance('2015年 02月 04日').format('EEE')
 ```
