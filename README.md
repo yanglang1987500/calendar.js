@@ -27,13 +27,13 @@ Calendar.getInstance('2015年 02月 04日').format('EEE')
 ```
 输出 "星期三"  
 
-通过日期对象提取并格式化
+#### 通过日期对象提取并格式化
 ```javascript
 Calendar.getInstance(new Date()).format('EEE')
 ```
 输出 "星期五"  
 
-通过时间整数值进行提取并格式化
+#### 通过时间整数值进行提取并格式化
 ```javascript
 Calendar.getInstance(new Date().getTime()).format('EEE')
 ```
@@ -45,37 +45,37 @@ Calendar.getInstance(1455846811337).format('yyyyMMdd HHmmss')
 ```
 输出 "20160219 095331"  
 
-支持格式化成“周X”
+#### 支持格式化成“周X”
 ```javascript
 Calendar.getInstance(1455846811337).format('EE')
 ```
 输出 "周五"  
 
-通过整数值提取时间，再链式调整时间增加一月并格式化
+#### 通过整数值提取时间，再链式调整时间增加一月并格式化
 ```javascript
 Calendar.getInstance(1455846811337).add(Calendar.MONTH,1).format('EE')
 ```
 输出 "周六"  
 
-链式减一月并格式化
+#### 链式减一月并格式化
 ```javascript
 Calendar.getInstance(1455846811337).add(Calendar.MONTH,-1).format('EE')
 ```
 输出 "周二"  
 
-链式减一周并格式化
+#### 链式减一周并格式化
 ```javascript
 Calendar.getInstance(1455846811337).add(Calendar.WEEK,-1).format('EE')
 ```
 输出 "周五"  
 
-提取当前时间链式减一周（即上周的这个时间点）并格式化
+#### 提取当前时间链式减一周（即上周的这个时间点）并格式化
 ```javascript
 Calendar.getInstance().add(Calendar.WEEK,-1).format('EE')
 ```
 输出 "周五"  
 
-随便操作，想怎样便能怎样~
+#### 随便操作，想怎样便能怎样~
 ```javascript
 Calendar.getInstance().add(Calendar.WEEK,-1).format('yyyy年')
 ```
