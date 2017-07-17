@@ -1,6 +1,6 @@
 [calendar.js](https://github.com/yanglang1987500/calendar.js)
 =====
-#### Perhaps the most simple and easy to use, the most powerful date processing tool 也许是最简单实用的日期处理工具了，优雅的链式操作，用了它保准你再也回不去了。
+#### 也许是最简单实用的日期处理工具了，优雅的链式操作，用了它保准你再也回不去了。
 
 API非常简洁，只有getInstance、add、format、parse、getTime五个方法
  * getInstance用以实例化，入参可以是一个日期对象或日期字符串或Calendar对象或时间值
