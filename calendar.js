@@ -35,7 +35,7 @@
         },
         /**
          * @method add
-         * @param type Calendar.YEAR Calendar.MONTH Calendar.WEEK Calendar.DATE
+         * @param type Calendar[YEAR|MONTH|WEEK|DATE|HOUR|MINUTE|SECOND]
          * @param num 正数或负数
          */
         add: function (type, num) {
