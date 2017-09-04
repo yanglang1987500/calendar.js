@@ -24,6 +24,12 @@
     Calendar.MINUTE = 6;
     Calendar.SECOND = 7;
 
+    var minute = 1000 * 60, 
+        hour = minute * 60, 
+        day = hour * 24, 
+        halfamonth = day * 15, 
+        month = day * 30;
+
     Calendar.prototype = {
         constructor:Calendar,
         /**
@@ -106,6 +112,35 @@
          */
         format:function(fmt){
             return this.date.format(fmt);
+        },
+        /**
+         * @method {{friendly}} 转换社交专用格式
+         * @param  {[type]} seconds [当前时间之前多少秒] 可选，如果没有，使用实例时间计算
+         */
+        friendly:function(seconds){
+            var now = new Date().getTime();
+            var before = seconds?seconds*1000 :this.getTime().getTime();
+            var diffValue = now - before ;
+            if (diffValue < 0) {
+                throw Error('计算时间不能大于当前时间');
+            }
+            var monthC = diffValue / month,
+                weekC = diffValue / (7 * day),
+                dayC = diffValue / day,
+                hourC = diffValue / hour,
+                minC = diffValue / minute;
+            if (monthC >= 1) {
+                return parseInt(monthC) + "个月前";
+            } else if (weekC >= 1) {
+                return parseInt(weekC) + "周前";
+            } else if (dayC >= 1) {
+                return parseInt(dayC) + "天前";
+            } else if (hourC >= 1) {
+                return parseInt(hourC) + "小时前";
+            } else if (minC >= 1) {
+                return parseInt(minC) + "分钟前";
+            } else
+                return "刚刚发表";
         }
     };
 
