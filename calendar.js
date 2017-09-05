@@ -140,7 +140,7 @@
             } else if (minC >= 1) {
                 return parseInt(minC) + "分钟前";
             } else
-                return "刚刚发表";
+                return "刚刚";
         }
     };
 
