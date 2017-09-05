@@ -75,8 +75,15 @@ Calendar.getInstance().add(Calendar.WEEK,-1).format('EE')
 ```
 输出 "周五"  
 
+
 #### 随便操作，想怎样便能怎样~
 ```javascript
 Calendar.getInstance().add(Calendar.WEEK,-1).format('yyyy年')
 ```
 输出 "2016年"
+
+#### PS：补充了一个friendly方法用于格式化成如下形式：1分钟前，5分钟前，1小时前，刚刚，1天前，一个月前等。。。
+```javascript
+Calendar.getInstance().add(Calendar.WEEK,-1).friendly()
+```
+输出“一周前”
